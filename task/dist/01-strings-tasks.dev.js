@@ -116,7 +116,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
 
 
 function repeatString(value, count) {
-  throw new Error('Not implemented');
+  return value.repeat(count);
 }
 /**
  * Remove the first occurrence of string inside another string
