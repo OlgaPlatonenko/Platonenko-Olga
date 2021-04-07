@@ -133,7 +133,7 @@ function repeatString(value, count) {
 
 
 function removeFirstOccurrences(str, value) {
-  throw new Error('Not implemented');
+  return str.replace(value, '');
 }
 /**
  * Remove the first and last angle brackets from tag string
