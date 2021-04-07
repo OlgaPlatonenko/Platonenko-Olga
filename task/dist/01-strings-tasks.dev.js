@@ -149,7 +149,7 @@ function removeFirstOccurrences(str, value) {
 
 
 function unbracketTag(str) {
-  throw new Error('Not implemented');
+  return str.substring(1, str.length - 1);
 }
 /**
  * Converts all characters of the specified string into the upper case
