@@ -179,7 +179,7 @@ function convertToUpperCase(str) {
 
 
 function extractEmails(str) {
-  throw new Error('Not implemented');
+  return str.split(';');
 }
 /**
  * Returns the string representation of rectangle with specified width and height
