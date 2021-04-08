@@ -208,9 +208,7 @@ function getRectangleString(width, height) {
     var strMiddle=('│'.concat(' '.repeat(width-2))).concat('│').concat('\n');
     var str=(strBeg.concat(strMiddle.repeat(height-2))).concat(strEnd);
    return str;
- 
     
-  
 }
 
 
