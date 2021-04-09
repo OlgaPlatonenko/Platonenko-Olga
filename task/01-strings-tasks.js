@@ -228,7 +228,16 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-    throw new Error('Not implemented');
+    const apha1='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz !?';
+    const apha2='NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm !?'; 
+    var newStr='';
+   //ищем номер позиции i-ого символа в алфавите alpha1
+    //формируем новую строку взяв из alpha2 символы с тех же позиций
+    for (var i=0;i<str.length;i++){        
+        var position=apha1.indexOf(str[i]); 
+        newStr= newStr.concat(apha2.substring(position,position+1));          
+    }
+    return newStr;
 }
 
 /**
@@ -245,7 +254,13 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-    throw new Error('Not implemented');
+    let str='';
+    if (typeof value==String){
+       str='true';
+    } else {
+        str='false';
+    }
+    return str;
 }
 
 
