@@ -259,8 +259,7 @@ function isString(value) {
        return true;
     } else {
        return false;
-    }
-    
+    }    
 }
 
 
@@ -289,7 +288,9 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-    throw new Error('Not implemented');
+    let deck=['A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣','A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦','A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
+'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'];
+ return deck.indexOf(value);
 }
 
 
