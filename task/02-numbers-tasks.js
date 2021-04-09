@@ -39,7 +39,10 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    throw new Error('Not implemented');
+  const PI=3.141592653589793;
+  let circumference=2*PI*radius;
+  return circumference;
+
 }
 
 /**

@@ -38,7 +38,9 @@ function getRectangleArea(width, height) {
 
 
 function getCicleCircumference(radius) {
-  throw new Error('Not implemented');
+  var PI = 3.141592653589793;
+  var circumference = 2 * PI * radius;
+  return circumference;
 }
 /**
  * Returns an average of two given numbers.
