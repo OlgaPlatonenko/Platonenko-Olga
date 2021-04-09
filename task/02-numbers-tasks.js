@@ -95,7 +95,15 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-    throw new Error('Not implemented');
+    let root=-b/a;
+    if (a!==0){
+        let root=-b/a;
+        return root;
+    }
+    else {
+        return "Корень - любое число";
+    }
+    
 }
 
 
