@@ -58,6 +58,7 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
+
     throw new Error('Not implemented');
 }
 
@@ -77,7 +78,8 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-    throw new Error('Not implemented');
+    let dist=Math.sqrt((x2-x1)**2+(y2-y1)**2);
+    return dist;
 }
 
 /**
