@@ -125,7 +125,11 @@ function getLinearEquationRoot(a, b) {
 
 
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  throw new Error('Not implemented');
+  var scal = x1 * x2 + y1 * y2;
+  var absVector1 = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2));
+  var absVector2 = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2));
+  var angel = Math.acos(scal / (absVector1 * absVector2));
+  return angel;
 }
 /**
  * Returns a last digit of a integer number.
