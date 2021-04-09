@@ -207,7 +207,11 @@ function extractEmails(str) {
 
 
 function getRectangleString(width, height) {
-  throw new Error('Not implemented');
+  var strBeg = '┌'.concat('─'.repeat(width - 2)).concat('┐').concat('\n');
+  var strEnd = '└'.concat('─'.repeat(width - 2)).concat('┘').concat('\n');
+  var strMiddle = '│'.concat(' '.repeat(width - 2)).concat('│').concat('\n');
+  var str = strBeg.concat(strMiddle.repeat(height - 2)).concat(strEnd);
+  return str;
 }
 /**
  * Encode specified string with ROT13 cipher
@@ -227,7 +231,17 @@ function getRectangleString(width, height) {
 
 
 function encodeToRot13(str) {
-  throw new Error('Not implemented');
+  var apha1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz !?';
+  var apha2 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm !?';
+  var newStr = ''; //ищем номер позиции i-ого символа в алфавите alpha1
+  //формируем новую строку взяв из alpha2 символы с тех же позиций
+
+  for (var i = 0; i < str.length; i++) {
+    var position = apha1.indexOf(str[i]);
+    newStr = newStr.concat(apha2.substring(position, position + 1));
+  }
+
+  return newStr;
 }
 /**
  * Returns true if the value is string; otherwise false.
@@ -245,7 +259,11 @@ function encodeToRot13(str) {
 
 
 function isString(value) {
-  throw new Error('Not implemented');
+  if (typeof value === 'string' || value instanceof String) {
+    return true;
+  } else {
+    return false;
+  }
 }
 /**
  * Returns playid card id.
