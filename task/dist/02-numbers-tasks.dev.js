@@ -262,7 +262,13 @@ function isPrime(n) {
 
 
 function toNumber(value, def) {
-  throw new Error('Not implemented');
+  var num = Number(value);
+
+  if (isNaN(num)) {
+    return def;
+  } else {
+    return num;
+  }
 }
 
 module.exports = {
