@@ -228,7 +228,21 @@ function roundToPowerOfTen(num, pow) {
 
 
 function isPrime(n) {
-  throw new Error('Not implemented');
+  var k = 0;
+
+  for (var i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      k++;
+    } else {
+      continue;
+    }
+  }
+
+  if (k === 2) {
+    return true;
+  } else {
+    return false;
+  }
 }
 /**
  * Tries to convert value to number and returns it if conversion was successfull;
