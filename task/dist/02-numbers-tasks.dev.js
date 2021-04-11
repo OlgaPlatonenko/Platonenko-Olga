@@ -164,7 +164,7 @@ function getLastDigit(value) {
 
 
 function parseNumberFromString(value) {
-  throw new Error('Not implemented');
+  return parseFloat(value);
 }
 /**
  * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
