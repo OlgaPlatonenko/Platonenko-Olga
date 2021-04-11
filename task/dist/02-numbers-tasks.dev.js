@@ -182,7 +182,8 @@ function parseNumberFromString(value) {
 
 
 function getParallelipidedDiagonal(a, b, c) {
-  throw new Error('Not implemented');
+  var diagLengt = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2));
+  return diagLengt;
 }
 /**
  * Returns the number rounded to specified power of 10.
