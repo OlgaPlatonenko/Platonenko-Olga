@@ -1,5 +1,4 @@
 'use strict';
-
 /**********************************************************************************************
  *                                                                                            *
  * Plese read the following tutorial before implementing tasks:                               *
@@ -9,7 +8,6 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures                           *
  *                                                                                            *
  **********************************************************************************************/
-
 
 /**
  * Returns the functions composition of two specified functions f(x) and g(x).
@@ -25,11 +23,10 @@
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.acos(x))
  *
  */
-function getComposition(f,g) {
-    throw new Error('Not implemented');
+
+function getComposition(f, g) {
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Returns the math power function with the specified exponent
  *
@@ -47,15 +44,14 @@ function getComposition(f,g) {
  *
  */
 
+
 function getPowerFunction(exponent) {
-    /*
-    function power(x,exponent){
-        return x**exponent;
-    }*/
-    throw new Error('Not implemented');
+  /*
+  function power(x,exponent){
+      return x**exponent;
+  }*/
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Returns the polynom function of one argument based on specified coefficients.
  * See: https://en.wikipedia.org/wiki/Polynomial#Definition
@@ -69,11 +65,11 @@ function getPowerFunction(exponent) {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
+
+
 function getPolynom() {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Memoizes passed function and returns function
  * which invoked first time calls the passed function and then always returns cached result.
@@ -88,11 +84,11 @@ function getPolynom() {
  *   ...
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
+
+
 function memoize(func) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Returns the function trying to call the passed function and if it throws,
  * retrying it specified number of attempts.
@@ -108,11 +104,11 @@ function memoize(func) {
  * }, 2);
  * retryer() => 2
  */
+
+
 function retry(func, attempts) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Returns the logging wrapper for the specified method,
  * Logger has to log the start and end of calling the specified function.
@@ -136,11 +132,11 @@ function retry(func, attempts) {
  * cos(3.141592653589793) ends
  *
  */
+
+
 function logger(func, logFunc) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Return the function with partial applied arguments
  *
@@ -154,11 +150,11 @@ function logger(func, logFunc) {
  *   partialUsingArguments(fn, 'a','b','c')('d') => 'abcd'
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
+
+
 function partialUsingArguments(fn) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Returns the id generator function that returns next integer starting from specified number every time when invoking.
  *
@@ -175,36 +171,34 @@ function partialUsingArguments(fn) {
  *   getId4() => 7
  *   getId10() => 11
  */
+
+
 function getIdGeneratorFunction(startFrom) {
-  function getIdGenerator(n){
-    let counter=n;   
-    return function f(){
-        return counter++;
-    }
+  function getIdGenerator(n) {
+    var counter = n;
+    return function f() {
+      return counter++;
+    };
+  }
+
+  var getId4 = getIdGenerator(4);
+  var getId10 = getIdGenerator(10);
+  var f0 = getIdGenerator(0);
+  console.log(getId4());
+  console.log(getId10());
+  console.log(getId4());
+  console.log(getId4());
+  console.log(getId4());
+  console.log(getId10());
 }
-    let getId4=getIdGenerator(4);
-    let getId10=getIdGenerator(10);
-    let f0=getIdGenerator(0);
-
-    console.log(getId4());
-    console.log(getId10());
-    console.log(getId4());
-    console.log(getId4());
-    console.log(getId4());
-    console.log(getId10());
-       
-
-  
-}
-
 
 module.exports = {
-    getComposition: getComposition,
-    getPowerFunction: getPowerFunction,
-    getPolynom: getPolynom,
-    memoize: memoize,
-    retry: retry,
-    logger: logger,
-    partialUsingArguments: partialUsingArguments,
-    getIdGeneratorFunction: getIdGeneratorFunction,
+  getComposition: getComposition,
+  getPowerFunction: getPowerFunction,
+  getPolynom: getPolynom,
+  memoize: memoize,
+  retry: retry,
+  logger: logger,
+  partialUsingArguments: partialUsingArguments,
+  getIdGeneratorFunction: getIdGeneratorFunction
 };
