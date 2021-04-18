@@ -57,7 +57,14 @@ function parseDataFromIso8601(value) {
 
 
 function isLeapYear(date) {
-  throw new Error('Not implemented');
+  var data = new Date(date);
+  var yearFromDate = data.getFullYear();
+
+  if (yearFromDate % 100 === 0 && yearFromDate % 400 === 0 || yearFromDate % 100 !== 0 && yearFromDate % 4 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 /**
  * Returns the string represention of the timespan between two dates.
