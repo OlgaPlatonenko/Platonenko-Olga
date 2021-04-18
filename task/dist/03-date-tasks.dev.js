@@ -38,7 +38,7 @@ function parseDataFromRfc2822(value) {
 
 
 function parseDataFromIso8601(value) {
-  throw new Error('Not implemented');
+  return Date.parse(value);
 }
 /**
  * Returns true if specified date is leap year and false otherwise
