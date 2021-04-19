@@ -84,7 +84,57 @@ function isLeapYear(date) {
  *    Date(2000,1,1,10,0,0),  Date(2000,1,1,15,20,10,453)   => "05:20:10.453"
  */
 function timeSpanToString(startDate, endDate) {
-   throw new Error('Not implemented');
+
+  let timeBetween=Date.parse(endDate.toISOString())-Date.parse(startDate.toISOString());
+  let stringTime='';
+  
+  let h=Math.floor(timeBetween/3600000);
+  if (h===0){
+   stringTime+='00:';
+  }
+  if (h<10 && h>0){
+     stringTime+='0'+h.toString()+':';
+  } 
+  if( h>=10) {
+   stringTime+=h.toString()+':';
+  }
+
+  let m=Math.floor((timeBetween-h*3600000)/60000);
+  if (m===0) {
+   stringTime+='00:';
+  }
+  if (m>0 && m<10){
+   stringTime+='0'+m.toString()+':';
+}
+if(m>=10){
+ stringTime+=m.toString()+':';
+}
+
+  let s=Math.floor((timeBetween-h*3600000-m*60000)/1000);
+  if (s===0){
+   stringTime+='00.';
+  }
+  if (s>0 && s<10){
+   stringTime+='0'+s.toString()+'.';
+}
+if(s>=10){
+ stringTime+=s.toString()+'.';
+}
+
+  let ms=timeBetween-h*3600000-m*60000-s*1000; 
+  if (ms===0) {
+   stringTime+='000';
+   }
+  if (ms<10 && ms>0){
+   stringTime+='00'+ms.toString();
+ }
+      if (ms<100 && ms>=10){
+         stringTime+='0'+ms.toString();
+      } 
+      if(ms>=100){
+         stringTime+=ms.toString();
+      }
+  return stringTime;
 }
 
 

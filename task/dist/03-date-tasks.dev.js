@@ -84,7 +84,69 @@ function isLeapYear(date) {
 
 
 function timeSpanToString(startDate, endDate) {
-  throw new Error('Not implemented');
+  var timeBetween = Date.parse(endDate.toISOString()) - Date.parse(startDate.toISOString());
+  var stringTime = '';
+  var h = Math.floor(timeBetween / 3600000);
+
+  if (h === 0) {
+    stringTime += '00:';
+  }
+
+  if (h < 10 && h > 0) {
+    stringTime += '0' + h.toString() + ':';
+  }
+
+  if (h >= 10) {
+    stringTime += h.toString() + ':';
+  }
+
+  var m = Math.floor((timeBetween - h * 3600000) / 60000);
+
+  if (m === 0) {
+    stringTime += '00:';
+  }
+
+  if (m > 0 && m < 10) {
+    stringTime += '0' + m.toString() + ':';
+  }
+
+  if (m >= 10) {
+    stringTime += m.toString() + ':';
+  }
+
+  var s = Math.floor((timeBetween - h * 3600000 - m * 60000) / 1000);
+
+  if (s === 0) {
+    stringTime += '00.';
+  }
+
+  if (s > 0 && s < 10) {
+    stringTime += '0' + s.toString() + '.';
+  }
+
+  if (s >= 10) {
+    stringTime += s.toString() + '.';
+  }
+
+  var ms = timeBetween - h * 3600000 - m * 60000 - s * 1000;
+
+  if (ms === 0) {
+    stringTime += '000';
+  }
+
+  if (ms < 10 && ms > 0) {
+    stringTime += '00' + ms.toString();
+  }
+
+  if (ms < 100 && ms >= 10) {
+    stringTime += '0' + ms.toString();
+  }
+
+  if (ms >= 100) {
+    stringTime += ms.toString();
+  }
+
+  return stringTime;
 }
 /**
  * Returns the angle (in radians) between the hands of an analog clock for the specified Greenwich time.
