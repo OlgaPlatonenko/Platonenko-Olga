@@ -164,7 +164,20 @@ function timeSpanToString(startDate, endDate) {
 
 
 function angleBetweenClockHands(date) {
-  throw new Error('Not implemented');
+  var PI = Math.PI;
+  var d = new Date(date);
+  var h = d.getUTCHours();
+  var min = d.getUTCMinutes();
+  var hAngle = 0.5 * (h * 60 + min);
+
+  if (hAngle > 360) {
+    hAngle -= 360;
+  }
+
+  var mAngle = 6 * min;
+  var angle = Math.abs(hAngle - mAngle);
+  angle = Math.min(angle, 360 - angle);
+  return angle * PI / 180;
 }
 
 module.exports = {

@@ -152,7 +152,19 @@ if(s>=10){
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-    throw new Error('Not implemented');
+   const PI=Math.PI;
+   let d=new Date(date);
+   let h=d.getUTCHours();
+   let min=d.getUTCMinutes();
+    let hAngle=0.5*(h*60+min);
+    if(hAngle>360){
+       hAngle-=360;
+    }
+ 
+    let mAngle=6*min;
+    let angle=Math.abs(hAngle-mAngle);
+    angle=Math.min(angle,360-angle);
+    return angle*PI/180;
 }
 
 
