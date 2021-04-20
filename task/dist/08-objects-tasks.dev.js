@@ -1,5 +1,4 @@
 'use strict';
-
 /**************************************************************************************************
  *                                                                                                *
  * Plese read the following tutorial before implementing tasks:                                   *
@@ -7,7 +6,6 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object        *
  *                                                                                                *
  **************************************************************************************************/
-
 
 /**
  * Returns the rectagle object with width and height parameters and getArea() method
@@ -22,20 +20,17 @@
  *    console.log(r.height);      // => 20
  *    console.log(r.getArea());   // => 200
  */
+
 function Rectangle(width, height) {
-    let Restangle={
-        width:width,
-        height:height,
-        
-        getArea: function() 
-          { 
-              return this.width*this.height;
-          },
-        }              
-    return Restangle;
+  var Restangle = {
+    width: width,
+    height: height,
+    getArea: function getArea() {
+      return this.width * this.height;
+    }
+  };
+  return Restangle;
 }
-
-
 /**
  * Returns the JSON representation of specified object
  *
@@ -46,11 +41,11 @@ function Rectangle(width, height) {
  *    [1,2,3]   =>  '[1,2,3]'
  *    { width: 10, height : 20 } => '{"height":10,"width":20}'
  */
+
+
 function getJSON(obj) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Returns the object of specified type from JSON representation
  *
@@ -62,11 +57,11 @@ function getJSON(obj) {
  *    var r = fromJSON(Rectangle.prototype, '{"width":10, "height":20}');
  *
  */
+
+
 function fromJSON(proto, json) {
-    throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
-
-
 /**
  * Css selectors builder
  *
@@ -115,41 +110,33 @@ function fromJSON(proto, json) {
  *  For more examples see unit tests.
  */
 
-const cssSelectorBuilder = {
 
-    element: function(value) {
-        throw new Error('Not implemented');
-    },
-
-    id: function(value) {
-        throw new Error('Not implemented');
-    },
-
-    class: function(value) {
-        throw new Error('Not implemented');
-    },
-
-    attr: function(value) {
-        throw new Error('Not implemented');
-    },
-
-    pseudoClass: function(value) {
-        throw new Error('Not implemented');
-    },
-
-    pseudoElement: function(value) {
-        throw new Error('Not implemented');
-    },
-
-    combine: function(selector1, combinator, selector2) {
-        throw new Error('Not implemented');
-    },
+var cssSelectorBuilder = {
+  element: function element(value) {
+    throw new Error('Not implemented');
+  },
+  id: function id(value) {
+    throw new Error('Not implemented');
+  },
+  "class": function _class(value) {
+    throw new Error('Not implemented');
+  },
+  attr: function attr(value) {
+    throw new Error('Not implemented');
+  },
+  pseudoClass: function pseudoClass(value) {
+    throw new Error('Not implemented');
+  },
+  pseudoElement: function pseudoElement(value) {
+    throw new Error('Not implemented');
+  },
+  combine: function combine(selector1, combinator, selector2) {
+    throw new Error('Not implemented');
+  }
 };
-
-
 module.exports = {
-    Rectangle: Rectangle,
-    getJSON: getJSON,
-    fromJSON: fromJSON,
-    cssSelectorBuilder: cssSelectorBuilder
+  Rectangle: Rectangle,
+  getJSON: getJSON,
+  fromJSON: fromJSON,
+  cssSelectorBuilder: cssSelectorBuilder
 };
