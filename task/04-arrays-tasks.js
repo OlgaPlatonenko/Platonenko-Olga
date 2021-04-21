@@ -122,7 +122,7 @@ function removeFalsyValues(arr) {
  */
 function getUpperCaseStrings(arr) {
    return arr.map(item => item.toUpperCase());
-   throw new Error('Not implemented');}
+   }
 
 
 /**
@@ -136,7 +136,8 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-   throw new Error('Not implemented');
+   let arrayLength=arr.map(str => str.length);
+   return arrayLength;
 }
 
 /**
