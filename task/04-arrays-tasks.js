@@ -88,6 +88,8 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
+/*   let arrStringOnly=arr.filter(item => typeof item==='string' );
+   return getArrayOfStrings;*/
    throw new Error('Not implemented');
 }
 
@@ -119,8 +121,8 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   throw new Error('Not implemented');
-}
+   return arr.map(item => item.toUpperCase());
+   throw new Error('Not implemented');}
 
 
 /**
