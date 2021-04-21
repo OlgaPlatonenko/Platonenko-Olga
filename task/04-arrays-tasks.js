@@ -23,7 +23,8 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+   let ind=arr.indexOf(value);
+   return ind;
 }
 
 /**
