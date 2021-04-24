@@ -283,6 +283,7 @@ function getSecondItems(arr) {
  *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
  */
 function propagateItemsByPositionIndex(arr) {
+  
    throw new Error('Not implemented');
 }
 
@@ -364,7 +365,7 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 function getItemsSum(arr) {
-   throw new Error('Not implemented');
+  throw new Error('Not implemented');
 }
  
 /** 
@@ -380,7 +381,17 @@ function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 function getFalsyValuesCount(arr) {
-   throw new Error('Not implemented');
+   let arrFalsy=[null,undefined, NaN, false, 0, ''];
+   let count=0;
+   let arrFitered=arr.filter(function(item){
+      if(arrFalsy.includes(item)){
+         count++;
+      }
+      
+   }
+
+   );
+  return count;
 }
 
 /**
