@@ -386,10 +386,8 @@ function getFalsyValuesCount(arr) {
    let arrFitered=arr.filter(function(item){
       if(arrFalsy.includes(item)){
          count++;
-      }
-      
+      }      
    }
-
    );
   return count;
 }
@@ -409,7 +407,8 @@ function getFalsyValuesCount(arr) {
  *    [ true, 0, 1, 'true' ], true => 1
  */
 function findAllOccurences(arr, item) {
-   throw new Error('Not implemented');
+  let arrCounts=arr.filter(i => i===item);
+  return arrCounts.length;
 }
 
 /**
