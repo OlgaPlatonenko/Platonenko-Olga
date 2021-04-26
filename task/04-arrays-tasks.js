@@ -508,8 +508,11 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
-   throw new Error('Not implemented');
+   let arrResult=new Array(end-start+1);
+   return arrResult.fill().map((item,ind) => start+ind);
+   
 }
+
 
 /**
  * Returns array containing only unique values from the specified array.
