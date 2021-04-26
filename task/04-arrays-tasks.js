@@ -452,6 +452,23 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 function sortCitiesArray(arr) {
+   /*arr.sort(function(a,b){
+      if(a.country>b.country){
+         return 1;
+      }
+      if(a.country<b.country){
+         return -1;
+      }   
+      if(a.city>b.city){
+         return 1;
+      }
+      if(a.city<b.city){
+         return -1;
+      }
+      return 0;
+   }
+
+   );*/
    throw new Error('Not implemented');
 }
 
@@ -506,7 +523,8 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
-   throw new Error('Not implemented');
+   const uniqueSet=new Set(arr);
+   return Array.from(uniqueSet);
 }
 
 /**
