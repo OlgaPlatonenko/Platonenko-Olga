@@ -39,7 +39,8 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  
+  //let arr=new Array(len);
+  //return arr.map((item,ind) => item+2);
   throw new Error('Not implemented');
 }
 
@@ -499,7 +500,11 @@ function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]   
  */
 function getIdentityMatrix(n) {
-   throw new Error('Not implemented');
+   
+ /*  arr.fill().map((itemStr,ind) => itemStr=arrStr.fill().map(function(elem,indstr){
+      if(ind===indstr){return 0} else {return 0}
+      }));*/
+      throw new Error('Not implemented');
 }
 
 /**
@@ -602,7 +607,10 @@ function selectMany(arr, childrenSelector) {
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
 function getElementByIndexes(arr, indexes) {
-    throw new Error('Not implemented');
+   return indexes.reduce((acc,ind) => {
+      return acc[ind];
+   },arr);
+   // throw new Error('Not implemented');
 }
 
 
