@@ -212,8 +212,9 @@ function getTail(arr, n) {
  *    +'20,21,22,23,24\n'
  *    +'30,31,32,33,34'
  */
-function toCsvText(arr) {
-   throw new Error('Not implemented');
+function toCsvText(arr) {  
+   let temp=arr.map(item => item.join(','));
+   return temp.join('\n');  
 }
 
 /**
