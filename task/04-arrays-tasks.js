@@ -40,12 +40,9 @@ function findElement(arr, value) {
  */
 function generateOdds(len) {
   let arr=new Array(len);
-
   let newArr= arr.fill().map( (_,ind) => 2*ind+1);
   return newArr;
- // return arr.map((item,ind) => 2*ind+1);
-  //throw new Error('Not implemented');
-}
+ }
 
 
 /**
@@ -61,7 +58,6 @@ function generateOdds(len) {
  */
 function doubleArray(arr) {
    return arr.concat(arr);
-
 }
 
 
@@ -93,9 +89,8 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   /*let arrStringOnly=arr.filter(item => (typeof item)==='string' );
-   return getArrayOfStrings;*/
-   throw new Error('Not implemented');
+   let arrStringOnly=arr.filter(item => (typeof item)==='string' );
+   return arrStringOnly;
 }
 
 /**
