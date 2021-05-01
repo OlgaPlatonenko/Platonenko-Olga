@@ -264,7 +264,15 @@ function getMovingSum(arr) {
  * [ "a" ] => []
  */
 function getSecondItems(arr) {
-   throw new Error('Not implemented');
+   let temp=arr.map(function(item,ind){
+      if (ind%2!=0){
+         return item;
+      } else {
+         return 'odd';
+      }
+   } ).filter(item => item!='odd');
+  return temp;
+   // throw new Error('Not implemented');
 }
 
 
