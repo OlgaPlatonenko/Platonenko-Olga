@@ -360,7 +360,87 @@ function getPositivesCount(arr) {
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
 function sortDigitNamesByNumericOrder(arr) {
-   throw new Error('Not implemented');
+
+   function replaceNameDigitstoToInt(nameOfDigit){
+      switch(nameOfDigit) {
+         case 'one': 
+          return 1;
+          break;   
+         case 'two': 
+          return 2;
+          break;   
+         case 'three': 
+          return 3;
+          break; 
+          case 'four': 
+          return 4;
+          break;
+          case 'five': 
+          return 5;
+          break;
+          case 'six': 
+          return 6;
+          break;
+          case 'seven': 
+          return 7;
+          break;
+          case 'eight': 
+          return 8;
+          break;
+          case 'nine': 
+          return 9;
+          break;
+          case 'zero': 
+          return 0;
+          break;
+
+       }
+   }
+
+   function replaceNameDigitsToString(nameOfDigitInt){
+      switch(nameOfDigitInt) {
+         case 1: 
+          return 'one';
+          break;   
+         case 2: 
+          return 'two';
+          break;   
+         case 3: 
+          return 'three';
+          break; 
+          case 4: 
+          return 'four';
+          break;
+          case 5: 
+          return 'five';
+          break;
+          case 6: 
+          return 'six';
+          break;
+          case 7: 
+          return 'seven';
+          break;
+          case 8: 
+          return 'eight';
+          break;
+          case 9: 
+          return 'nine';
+          break;
+          case 0: 
+          return 'zero';
+          break;
+       }
+   }
+
+   let resDigitInt=arr.map(item => replaceNameDigitstoToInt(item));
+   function compareNumeric(a, b) {
+      if (a > b) return 1;
+      if (a == b) return 0;
+      if (a < b) return -1;
+    }
+   let resDigitIntsorted=resDigitInt.sort(compareNumeric);
+   return resDigitIntsorted.map(item => replaceNameDigitsToString(item));
+  
 }
 
 /** 
