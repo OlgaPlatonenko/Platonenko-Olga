@@ -591,10 +591,25 @@ function sortCitiesArray(arr) {
  */
 function getIdentityMatrix(n) {
    
- /*  arr.fill().map((itemStr,ind) => itemStr=arrStr.fill().map(function(elem,indstr){
-      if(ind===indstr){return 0} else {return 0}
-      }));*/
-      throw new Error('Not implemented');
+   function fillStroka(arr,n){
+      return arr.map(function(item,ind){
+         if (ind===n){
+            return 1;
+         } else{
+            return 0;
+         }
+      })
+   }
+
+   let resultArray=new Array(n);
+   let temp=new Array(n);
+   temp.fill(0);
+   resultArray.fill(0);
+  return resultArray.map(function(item,ind){
+      return fillStroka(temp,ind);
+   } );
+ 
+ //     throw new Error('Not implemented');
 }
 
 /**
