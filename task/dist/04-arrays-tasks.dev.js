@@ -814,7 +814,24 @@ function getElementByIndexes(arr, indexes) {
 
 
 function swapHeadAndTail(arr) {
-  throw new Error('Not implemented');
+  var head = new Array();
+  var tail = new Array();
+  var middle = new Array();
+
+  if (arr.length === 1) {
+    return arr;
+  } else {
+    if (arr.length % 2 === 0) {
+      head = arr.slice(0, arr.length / 2);
+      tail = arr.slice(arr.length / 2, arr.length);
+      return tail.concat(head);
+    } else {
+      head = arr.splice(0, Math.floor(arr.length / 2));
+      tail = arr.splice(Math.floor(arr.length / 2), arr.length);
+      middle = arr.splice(Math.floor(arr.length / 2), 1);
+      return tail.concat(middle).concat(head);
+    }
+  }
 }
 
 module.exports = {
