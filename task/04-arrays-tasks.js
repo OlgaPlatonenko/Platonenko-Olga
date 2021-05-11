@@ -679,21 +679,12 @@ function distinct(arr) {
  *   }
  */
 function group(array, keySelector, valueSelector) {
-   /*
-   function groupBy(objectArray, property,value) {
-      return objectArray.reduce(function (acc, obj) {
-        let key = obj[property]
-        if (!acc[key]) {
-          acc[key] = []
-        }
-        acc[key].push(obj[value]);
-        return acc
-      }, {})
-    } 
-    let groupedCity = groupBy(array, keySelector,valueSelector);
-    return groupedCity;
-    */
-   throw new Error('Not implemented');
+   var map = new Map();
+   array.map((v, i) => {
+   map.set(keySelector(v), (map.get(keySelector(v)) === undefined ? [] : map.get(keySelector(v))).concat([valueSelector(v)]));
+   })
+   return map;
+  
 }
 
 
@@ -713,7 +704,6 @@ function selectMany(arr, childrenSelector) {
    return arr.flatMap(childrenSelector);
 
 }
-
 
 /**
  * Returns an element from the multidimentional array by the specified indexes.
