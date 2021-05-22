@@ -31,7 +31,9 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-   throw new Error('Not implemented');
+ let reg=new RegExp('^{([a-fA-F]|[0-9]){8}-([a-fA-F]|[0-9]){4}-([a-fA-F]|[0-9]){4}-([a-fA-F]|[0-9]){4}-([a-fA-F]|[0-9]){12}}'); 
+ return reg;
+  // throw new Error('Not implemented');
 }
 
 
