@@ -41,7 +41,7 @@ function getRegexForGuid() {
  * Returns the regexp that matches all the strings from first column
  * but of them from the second
  *
- * Match :                 Do not match:
+ * Match :                 Do not match:Returns the regexp that matches all the strings from first column
  * -----------             --------------
  *  'pit'                     ' pt'
  *  'spot'                    'Pot'
@@ -55,7 +55,9 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-   throw new Error('Not implemented');
+   let reg=new RegExp('.*p.t.*');
+   return reg;
+  // throw new Error('Not implemented');
 }
 
 
